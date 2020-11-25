@@ -4,12 +4,14 @@
 #define APAGADOR_C
 
 #include <string>
+#include <iostream>
 using namespace std;
 class Apagador{
 private:
     bool encendido;
 public:
     Apagador(){encendido = false;}
+    ~Apagador(){cout << "Destruyendo objeto Apagador\n";}
 
     void encender(){encendido = true;}
     void apagar(){encendido = false;}
@@ -22,7 +24,7 @@ public:
         if (isEncendido()) {estado = "encendido"; }
         else {estado = "apagado";}
 
-        return "Apagador. Se encuentra " + estado + "\n";
+        return "Apagador. Se encuentra " + estado;
     }
 };//Clase Apagador
 
